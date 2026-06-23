@@ -1,5 +1,7 @@
-#if os(Linux)
+#if canImport(Glibc)
 import Glibc
+#elseif canImport(Darwin)
+import Darwin
 #endif
 
 /// A class that gathers information about one statement during its compilation.
